@@ -3,9 +3,12 @@ import App from './App'
 import Vuex from 'vuex'
 import store from './store/store'
 
+import WXrequest from './utils/wx-request'
+Vue.prototype.$httpWX = WXrequest
+
 Vue.use(Vuex)
 
-// Vue.prototype.$store = store
+Vue.prototype.$store = store
 
 Vue.config.productionTip = false
 App.mpType = 'app'

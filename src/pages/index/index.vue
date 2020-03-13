@@ -72,6 +72,7 @@ export default {
 
   created () {
     // let app = getApp()
+    console.log(this.$httpWX)
   }
 }
 </script>
