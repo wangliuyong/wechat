@@ -1,6 +1,6 @@
 <template>
-  <div @click="clickHandle">
-
+  <div >
+    <button @click="increment">+{{count}}</button>
     <div class="userinfo" @click="bindViewTap">
       <img class="userinfo-avatar" v-if="userInfo.avatarUrl" :src="userInfo.avatarUrl" background-size="cover" />
       <img class="userinfo-avatar" src="/static/images/user.png" background-size="cover" />
@@ -34,6 +34,7 @@
 </template>
 
 <script>
+import { mapState, mapActions } from 'vuex'
 import card from '@/components/card'
 
 export default {
@@ -50,7 +51,9 @@ export default {
   components: {
     card
   },
-
+  computed: {
+    ...mapState(['count'])
+  },
   methods: {
     bindViewTap () {
       const url = '../logs/main'
@@ -63,7 +66,8 @@ export default {
     clickHandle (ev) {
       console.log('clickHandle:', ev)
       // throw {message: 'custom test'}
-    }
+    },
+    ...mapActions(['increment', 'decrement']),
   },
 
   created () {
