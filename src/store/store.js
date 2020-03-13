@@ -18,6 +18,15 @@ const store = new Vuex.Store({
       const obj = state
       obj.count -= 1
     }
+  },
+  actions:{
+    increment({commit}){
+      commit('increment')
+    },
+    decrement({commit}){
+      commit('decrement')
+    },
+
   }
 })
 
