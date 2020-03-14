@@ -1,10 +1,32 @@
 # wechat
 
-> A Mpvue project
+> # 微信小程序ui标准
 
-## 用vuex做全局状态控制
+## 单位px
 
-## 使用less
+- 必须是8的倍数
+
+## 项目目录结构
+
+- component 自定义组件
+
+- pages 页面
+
+- store  vuex
+
+- utils 辅助函数
+
+- static 静态资源
+
+- api 封装好的接口
+
+## 状态控制
+
+- 用vuex做全局状态控制
+
+## css预处理器
+
+- 使用less
 
 ## ui框架
 
