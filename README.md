@@ -2,7 +2,17 @@
 
 > A Mpvue project
 
+## 用vuex做全局状态控制
+
+## 使用less
+
+## ui框架
+
+https://github.com/iview/iview-mpvue
+
+
 ## Build Setup
+
 
 ``` bash
 # 初始化项目
