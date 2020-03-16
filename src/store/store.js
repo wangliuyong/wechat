@@ -7,17 +7,20 @@ Vue.use(Vuex)
 
 const store = new Vuex.Store({
   state: {
-    count: 0
+    count: 0,
+    userInfo: null,
+    isLogin: false
   },
   mutations: {
     increment: (state) => {
-      const obj = state
-      obj.count += 1
+      state.count += 1
     },
     decrement: (state) => {
-      const obj = state
-      obj.count -= 1
-    }
+      state.count -= 1
+    },
+    setLogin: (state, payload) => {
+      state.isLogin = payload.isLogin
+    },
   },
   actions:{
     increment({commit}){
@@ -26,7 +29,9 @@ const store = new Vuex.Store({
     decrement({commit}){
       commit('decrement')
     },
-
+    setLogin({commit}, {isLogin}){
+      commit('setLogin', {isLogin})
+    }
   }
 })
 

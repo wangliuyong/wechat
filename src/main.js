@@ -4,7 +4,11 @@ import Vuex from 'vuex'
 import store from './store/store'
 
 import WXrequest from './utils/wx-request'
+
+
 Vue.prototype.$httpWX = WXrequest
+
+
 
 Vue.use(Vuex)
 

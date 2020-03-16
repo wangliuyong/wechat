@@ -3,11 +3,6 @@
     <button @click="increment">+{{count}}</button>
     <div class="userinfo" @click="bindViewTap">
       <img class="userinfo-avatar" v-if="userInfo.avatarUrl" :src="userInfo.avatarUrl" background-size="cover" />
-      <img class="userinfo-avatar" src="/static/images/user.png" background-size="cover" />
-
-      <div class="userinfo-nickname">
-        <card :text="userInfo.nickName"></card>
-      </div>
     </div>
 
     <div class="usermotto">
@@ -17,19 +12,10 @@
     </div>
 
     <form class="form-container">
-      <input type="text" class="form-control" :value="motto" placeholder="v-model" />
-      <input type="text" class="form-control" v-model="motto" placeholder="v-model" />
       <input type="text" class="form-control" v-model.lazy="motto" placeholder="v-model.lazy" />
     </form>
 
     <a href="/pages/counter/main" class="counter">去往Vuex示例页面</a>
-
-    <div class="all">
-        <div class="left">
-        </div>
-        <div class="right">
-        </div>
-    </div>
   </div>
 </template>
 
@@ -43,7 +29,7 @@ export default {
       motto: 'Hello miniprograme',
       userInfo: {
         nickName: 'mpvue',
-        avatarUrl: 'http://mpvue.com/assets/logo.png'
+        avatarUrl: ''
       }
     }
   },
@@ -64,15 +50,14 @@ export default {
       }
     },
     clickHandle (ev) {
-      console.log('clickHandle:', ev)
-      // throw {message: 'custom test'}
+    
     },
     ...mapActions(['increment', 'decrement']),
   },
 
   created () {
     // let app = getApp()
-    console.log(this.$httpWX)
+    // console.log(this.$store.state)
   }
 }
 </script>
