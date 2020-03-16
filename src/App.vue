@@ -8,8 +8,11 @@ export default {
 
 
     user.getInfo().then(res => {
-      console.log("66666", res);
+      // console.log("66666", res);
       this.setLogin({isLogin: true})
+
+      wx.navigateTo({url: '/pages/login/main'})
+      // mpvue.reLaunch({url:'/pages/index/main'})
     }, (res) => {
       this.setLogin({isLogin: false})
     });

@@ -32,6 +32,11 @@
 
 https://github.com/iview/iview-mpvue
 
+# 注意
+新增页面需要重新npm  run  build
+
+参考链接： https://www.jianshu.com/p/4ee222b64f58
+
 
 ## Build Setup
 

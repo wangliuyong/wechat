@@ -1,33 +1,35 @@
 <template>
-  <div >
-   login
+  <div class="counter-warp">
+   登陆注册
   </div>
 </template>
 
 <script>
-import { mapState, mapActions } from 'vuex'
 
+// import { mapState, mapActions } from 'vuex'
 
 export default {
   data () {
     return {
-      account: '',
-      password: ''
+      motto: 'Hello miniprograme',
+      userInfo: {
+        nickName: 'mpvue',
+        avatarUrl: ''
+      }
     }
   },
   computed: {
-    ...mapState(['count'])
+    // ...mapState(['count'])
   },
   methods: {
-    ...mapActions(['increment', 'decrement']),
+  //  ...mapActions(['increment', 'decrement']),
   },
-  created () {
-    // let app = getApp()
-    // console.log(this.$store.state)
-  }
+  created() {
+    // console.log(this.$store)
+    // console.log(this.$httpWX)
+  },
 }
 </script>
 
-<style>
-
+<style lang="less">
 </style>
