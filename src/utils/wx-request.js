@@ -1,4 +1,4 @@
-const baseUrl = 'https://baidu.com'
+const baseUrl = 'http://localhost:3000'
  
 function request (url, method = 'get' , data = {}) {
   // wx.showLoading({

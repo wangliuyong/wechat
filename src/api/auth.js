@@ -5,7 +5,7 @@ const PATH = {
   REGISTER: '/auth/register',
   LOGIN: '/auth/login',
   LOGOUT: '/auth/logout',
-  GET_INFO: ''
+  GET_INFO: '/user'
 }
 
 export default {
