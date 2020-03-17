@@ -10,8 +10,6 @@ export default {
     ...mapActions(['setLogin']),
     // 检查登陆状态
     checkoutLogin(){
-      wx.navigateTo({url: '/pages/login/main'})
-
       user.getInfo().then(res => {
         console.log(res);
         if(res.status === 200 && res.user.login){

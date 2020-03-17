@@ -88,7 +88,7 @@ export default {
   },
   methods: {
     handleInputChange(evt) {
-      console.log(evt, 'inputchange')
+      this.$emit('inputchange', evt.target.value)
     },
     handleInputFocus(evt) {
       this.$emit('focus', evt)

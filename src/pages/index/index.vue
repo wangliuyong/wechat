@@ -1,28 +1,15 @@
 <template>
-  <div >
-    <button @click="increment">+{{count}}</button>
-    <div class="userinfo" @click="bindViewTap">
-      <img class="userinfo-avatar" v-if="userInfo.avatarUrl" :src="userInfo.avatarUrl" background-size="cover" />
-    </div>
-
-    <div class="usermotto">
-      <div class="user-motto">
-        <card :text="motto"></card>
-      </div>
-    </div>
-
-    <form class="form-container">
-      <input type="text" class="form-control" v-model.lazy="motto" placeholder="v-model.lazy" />
-    </form>
-   <a href="/pages/counter/main" class="counter">去往Vuex示例页面</a>
-
+  <div>
+    <i-input :value="userInfo.nickName" title="收货人" autofocus placeholder="名字" @inputchange="nameChange"/>
+    <i-button type="primary" @click="toLogin">去登陆页</i-button>
   </div>
 </template>
 
 <script>
   import { mapState, mapActions } from 'vuex'
-  import card from '@/components/card'
+
   import button from '@/iview/components/button/button'
+  import input from '@/iview/components/input/input'
 
   export default {
     data () {
@@ -36,8 +23,8 @@
     },
 
     components: {
-      card,
-      'i-button': button
+      'i-button': button,
+      'i-input': input
     },
     computed: {
       ...mapState(['count'])
@@ -52,11 +39,14 @@
           mpvue.navigateTo({ url })
         }
       },
-      clickHandle (ev) {
-      
+      toLogin () {
+        mpvue.navigateTo({ 
+          url: '../login/main'
+        })
       },
-      handleClick (ev) {
-      
+      nameChange (value) {
+        console.log(value)
+        this.userInfo.nickName = value 
       },
       ...mapActions(['increment', 'decrement']),
     },

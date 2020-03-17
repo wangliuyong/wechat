@@ -9,7 +9,7 @@ const store = new Vuex.Store({
   state: {
     count: 0,
     userInfo: null,
-    isLogin: false
+    isLogin: false // 全局登陆状态
   },
   mutations: {
     increment: (state) => {
