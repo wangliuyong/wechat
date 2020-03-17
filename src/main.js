@@ -2,11 +2,10 @@ import Vue from 'vue'
 import App from './App'
 import Vuex from 'vuex'
 import store from './store/store'
-
 import WXrequest from './utils/wx-request'
-import './iview/'
 
-
+//  引入iview 全局样式 
+import './iview/style.css'
 Vue.prototype.$httpWX = WXrequest
 
 

@@ -1,12 +1,13 @@
 <template>
   <div class="counter-warp">
-   登陆注册
+    <i-button bind:click="handleClick" type="success">登陆注册</i-button>
+   
   </div>
 </template>
 
 <script>
-
-// import { mapState, mapActions } from 'vuex'
+//import { mapState, mapActions } from 'vuex'
+  import button from '@/iview/components/button/button'
 
 export default {
   data () {
@@ -18,15 +19,16 @@ export default {
       }
     }
   },
+  components: {
+    'i-button': button
+  },
   computed: {
-    // ...mapState(['count'])
   },
   methods: {
-  //  ...mapActions(['increment', 'decrement']),
+
   },
   created() {
-    // console.log(this.$store)
-    // console.log(this.$httpWX)
+  
   },
 }
 </script>

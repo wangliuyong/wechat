@@ -27,52 +27,52 @@
 </template>
 
 <script>
-import { mapState, mapActions } from 'vuex'
-import card from '@/components/card'
- import button from '../../iview/components/button/button'
+  import { mapState, mapActions } from 'vuex'
+  import card from '@/components/card'
+  import button from '@/iview/components/button/button'
 
-export default {
-  data () {
-    return {
-      motto: 'Hello miniprograme',
-      userInfo: {
-        nickName: 'mpvue',
-        avatarUrl: ''
+  export default {
+    data () {
+      return {
+        motto: 'Hello miniprograme',
+        userInfo: {
+          nickName: 'mpvue',
+          avatarUrl: ''
+        }
       }
+    },
+
+    components: {
+      card,
+      'i-button': button
+    },
+    computed: {
+      ...mapState(['count'])
+    },
+    methods: {
+      bindViewTap () {
+        const url = '../logs/main'
+        if (mpvuePlatform === 'wx') {
+          mpvue.navigateTo({ url })
+          // mpvue.switchTab({ url })
+        } else {
+          mpvue.navigateTo({ url })
+        }
+      },
+      clickHandle (ev) {
+      
+      },
+      handleClick (ev) {
+      
+      },
+      ...mapActions(['increment', 'decrement']),
+    },
+
+    created () {
+      // let app = getApp()
+      // console.log(this.$store.state)
     }
-  },
-
-  components: {
-    card,
-    'i-button': button
-  },
-  computed: {
-    ...mapState(['count'])
-  },
-  methods: {
-    bindViewTap () {
-      const url = '../logs/main'
-      if (mpvuePlatform === 'wx') {
-        mpvue.navigateTo({ url })
-        // mpvue.switchTab({ url })
-      } else {
-        mpvue.navigateTo({ url })
-      }
-    },
-    clickHandle (ev) {
-    
-    },
-    handleClick (ev) {
-    
-    },
-    ...mapActions(['increment', 'decrement']),
-  },
-
-  created () {
-    // let app = getApp()
-    // console.log(this.$store.state)
   }
-}
 </script>
 
 <style scoped>
