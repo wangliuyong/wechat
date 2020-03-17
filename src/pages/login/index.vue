@@ -1,36 +1,47 @@
 <template>
   <div class="counter-warp">
-    <i-button bind:click="handleClick" type="success">登陆注册</i-button>
+     <i-input :value="value1" title="收货人" :autofocus="true" placeholder="名字" @change="xxx"/>
+     <div class="i-input i-cell">
+        <view class="i-input-title">xxxxx</view>
+        <input class="i-input-input" v-model="user.value2"/>
+     </div>
+    
+    <i-button @click="handleClick" type="warning">Warning</i-button>
    
   </div>
 </template>
 
 <script>
 //import { mapState, mapActions } from 'vuex'
-  import button from '@/iview/components/button/button'
+
+import iInput from 'iview-mpvue/dist/components/input/input'
+  
+
 
 export default {
-  data () {
+
+  data (){
     return {
-      motto: 'Hello miniprograme',
-      userInfo: {
-        nickName: 'mpvue',
-        avatarUrl: ''
-      }
+      value1:454454,
+     user:{
+       value1:2222,
+       value2:3333
+     }
+
     }
   },
   components: {
-    'i-button': button
+    'i-input': iInput
   },
-  computed: {
-  },
+  computed: {},
   methods: {
-
+    handleClick(name){
+      console.log(this.value1)
+      console.log(this.user.value2)
+    }
   },
-  created() {
-  
-  },
-}
+  created() {}
+};
 </script>
 
 <style lang="less">

@@ -15,14 +15,7 @@
       <input type="text" class="form-control" v-model.lazy="motto" placeholder="v-model.lazy" />
     </form>
    <a href="/pages/counter/main" class="counter">去往Vuex示例页面</a>
-   <i-button bind:click="handleClick">默认按钮</i-button>
-<i-button bind:click="handleClick" type="error" long="true">联通两边按钮</i-button>
-<i-button bind:click="handleClick" type="primary">Primary</i-button>
-<i-button bind:click="handleClick" type="ghost">Ghost</i-button>
-<i-button bind:click="handleClick" type="info">Info</i-button>
-<i-button bind:click="handleClick" type="success">Success</i-button>
-<i-button bind:click="handleClick" type="warning">Warning</i-button>
-<i-button bind:click="handleClick" type="error">Error</i-button>
+
   </div>
 </template>
 

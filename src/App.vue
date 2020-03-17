@@ -10,6 +10,7 @@ export default {
     ...mapActions(['setLogin']),
     // 检查登陆状态
     checkoutLogin(){
+      wx.navigateTo({url: '/pages/login/main'})
 
       user.getInfo().then(res => {
         console.log(res);
@@ -30,6 +31,4 @@ export default {
 </script>
 
 <style lang="less">
-  
-  // @import './iview/style.less';
 </style>
