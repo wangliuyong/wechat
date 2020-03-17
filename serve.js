@@ -23,7 +23,7 @@ var server = http.createServer(function(request, response){
     response.statusCode = 200;
     response.setHeader('Content-Type', 'application/json;charset=utf-8');
     response.write(`{
-      "status":200,
+      "code":1,
       "user": {
         "login": true
       }

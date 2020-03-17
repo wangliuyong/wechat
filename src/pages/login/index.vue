@@ -1,34 +1,36 @@
 <template>
   <div class="counter-warp">
-    <div class="i-input i-cell">
-      <view class="i-input-title">用户名</view>
-      <input class="i-input-input" v-model="user.value2"/>
-    </div>
-    <i-button @click="handleClick" type="warning">546454645rning</i-button>
+    <i-input :value="userInfo.nickName" title="昵称" autofocus placeholder="名字" @inputchange="nameChange"/>
+    <i-button @click="register" type="primary" size="small">注册</i-button>
   </div>
 </template>
 
 <script>
 //import { mapState, mapActions } from 'vuex'
 import button from '@/iview/components/button/button'
+import input from '@/iview/components/input/input'
 
 export default {
 
   data (){
     return {
-     user:{
-       value1:2222,
-       value2:3333
+     userInfo:{
+       nickName:'',
+       roleId:0
      }
     }
   },
   components: {
-    'i-button': button
+    'i-button': button,
+    'i-input': input
   },
   computed: {},
   methods: {
-    handleClick(name){
-      console.log(this.user.value2)
+    register(){
+      console.log(this.userInfo)
+    },
+    nameChange(value){
+      this.userInfo.nickName = value;
     }
   },
   created() {}

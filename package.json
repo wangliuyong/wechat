@@ -24,6 +24,7 @@
   },
   "dependencies": {
     "axios": "^0.19.2",
+    "iview-mpvue": "^1.0.6",
     "less": "^3.11.1",
     "less-loader": "^5.0.0",
     "mpvue": "^2.0.0",

@@ -38,6 +38,14 @@ https://github.com/iview/iview-mpvue
 参考链接： https://www.jianshu.com/p/4ee222b64f58
 
 
+## 跳转
+```
+  mpvue.navigateTo({ url })
+  mpvue.switchTab({ url })
+  
+```
+
+
 ## Build Setup
 
 

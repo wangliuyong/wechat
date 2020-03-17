@@ -1,7 +1,14 @@
 <template>
   <div>
-    <i-input :value="userInfo.nickName" title="收货人" autofocus placeholder="名字" @inputchange="nameChange"/>
-    <i-button type="primary" @click="toLogin">去登陆页</i-button>
+    <i-tabs v-model="current" v-on:change="handleChange">
+      <i-tab item-key="tab1" title="行业动态"></i-tab>
+      <i-tab item-key="tab2" title="招标信息"></i-tab>
+      <i-tab item-key="tab3" title="懂微资讯"></i-tab>
+    </i-tabs>
+    <div class="message-container" v-if="current === 'tab1'">
+      <i-button type="primary" @click="toLogin">去注册页</i-button>
+      <i-button type="primary" @click="toPay">去支付页</i-button>
+    </div> 
   </div>
 </template>
 
@@ -10,11 +17,13 @@
 
   import button from '@/iview/components/button/button'
   import input from '@/iview/components/input/input'
+  import iTabs from 'iview-mpvue/dist/components/tabs/tabs'
+  import iTab from 'iview-mpvue/dist/components/tab/tab'
 
   export default {
     data () {
       return {
-        motto: 'Hello miniprograme',
+        current: 'tab1',
         userInfo: {
           nickName: 'mpvue',
           avatarUrl: ''
@@ -24,31 +33,34 @@
 
     components: {
       'i-button': button,
-      'i-input': input
+      'i-input': input,
+      'i-tabs': iTabs,
+      'i-tab': iTab
     },
     computed: {
       ...mapState(['count'])
     },
     methods: {
-      bindViewTap () {
-        const url = '../logs/main'
-        if (mpvuePlatform === 'wx') {
-          mpvue.navigateTo({ url })
-          // mpvue.switchTab({ url })
-        } else {
-          mpvue.navigateTo({ url })
-        }
-      },
       toLogin () {
         mpvue.navigateTo({ 
           url: '../login/main'
         })
       },
       nameChange (value) {
-        console.log(value)
         this.userInfo.nickName = value 
       },
+      toPay(){
+        
+      },
       ...mapActions(['increment', 'decrement']),
+       handleChange(val) {
+        
+          console.log(val)
+          console.log(this.current)
+      },
+      handleChangeScroll(val) {
+          // todo
+      }
     },
 
     created () {

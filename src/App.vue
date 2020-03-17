@@ -11,10 +11,10 @@ export default {
     // 检查登陆状态
     checkoutLogin(){
       user.getInfo().then(res => {
-        console.log(res);
-        if(res.status === 200 && res.user.login){
+        if(res.code === 1 && res.user.login){
           this.setLogin({isLogin: true})
         } else {
+          this.setLogin({isLogin: false})
           // 没有登陆跳到登陆页面
           wx.navigateTo({url: '/pages/login/main'})
         }

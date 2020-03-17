@@ -1,6 +1,9 @@
 import Vue from 'vue'
 import App from './index'
 
+import 'iview-mpvue/dist/components/tabs/style/css'
+import 'iview-mpvue/dist/components/tab/style/css'
+
 import store from '../../store/store'
 // 重要，否则会出现辅助函数不能使用问题
 Vue.prototype.$store = store
