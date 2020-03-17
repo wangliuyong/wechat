@@ -4,9 +4,10 @@ import Vuex from 'vuex'
 import store from './store/store'
 
 import WXrequest from './utils/wx-request'
-
+import 'mpvue-weui/src/style/weui.css';
 
 Vue.prototype.$httpWX = WXrequest
+
 
 
 

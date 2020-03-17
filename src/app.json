@@ -4,7 +4,6 @@
     "pages/logs/main",
     "pages/counter/main",
     "pages/login/main"
-    
   ],
   "window": {
     "backgroundTextStyle": "light",
