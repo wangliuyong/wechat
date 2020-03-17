@@ -14,14 +14,15 @@
     <form class="form-container">
       <input type="text" class="form-control" v-model.lazy="motto" placeholder="v-model.lazy" />
     </form>
-
-    <a href="/pages/counter/main" class="counter">去往Vuex示例页面</a>
+   <a href="/pages/counter/main" class="counter">去往Vuex示例页面</a>
+   <i-button type="error" @click="handleClick">这是一个按钮</i-button>
   </div>
 </template>
 
 <script>
 import { mapState, mapActions } from 'vuex'
 import card from '@/components/card'
+ import button from '../../iview/components/button/button'
 
 export default {
   data () {
@@ -35,7 +36,8 @@ export default {
   },
 
   components: {
-    card
+    card,
+    'i-button': button
   },
   computed: {
     ...mapState(['count'])
