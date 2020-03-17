@@ -21,19 +21,18 @@ const mutations={
     state.user=payload.user;
   },
   setLogin(state,payload){
-    state.isLogin=payload.isLogin;
+    state.isLogin=payload.isLogin
   }
 }
 const actions={
   setOpenid({commit},{openid}){
-    commit('setOpenId',{openid});
+    commit('setOpenId',{openid})
   },
   setUser({commit},{user}){
-    commit('setUser',{user});
-    commit('setLogin',{isLogin: true});
+    commit('setUser',{user})
   },
   setLogin({commit},{isLogin}){
-    commit('setLogin',{isLogin});
+    commit('setLogin',{isLogin})
   }
 }
 

@@ -36,10 +36,10 @@ export default {
               console.log(res);
               this.setOpenid({openid: res.openid});
             },(res) => {
-
+              
             })
           } else {
-            console.log("登录失败！" + res.errMsg);
+            console.log(res.errMsg);
           }
         }
       });
