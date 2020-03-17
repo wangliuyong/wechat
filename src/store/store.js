@@ -1,38 +1,13 @@
-// https://vuex.vuejs.org/zh-cn/intro.html
-// make sure to call Vue.use(Vuex) if using a module system
 import Vue from 'vue'
 import Vuex from 'vuex'
+import user from './modules/user'
 
 Vue.use(Vuex)
 
 const store = new Vuex.Store({
-  state: {
-    count: 0,
-    userInfo: null,
-    isLogin: false // 全局登陆状态
+  modules:{
+    user
   },
-  mutations: {
-    increment: (state) => {
-      state.count += 1
-    },
-    decrement: (state) => {
-      state.count -= 1
-    },
-    setLogin: (state, payload) => {
-      state.isLogin = payload.isLogin
-    },
-  },
-  actions:{
-    increment({commit}){
-      commit('increment')
-    },
-    decrement({commit}){
-      commit('decrement')
-    },
-    setLogin({commit}, {isLogin}){
-      commit('setLogin', {isLogin})
-    }
-  }
 })
 
 export default store

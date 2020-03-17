@@ -5,6 +5,7 @@
       <i-tab item-key="tab2" title="招标信息"></i-tab>
       <i-tab item-key="tab3" title="懂微资讯"></i-tab>
     </i-tabs>
+
     <div class="message-container" v-if="current === 'tab1'">
       <i-button type="primary" @click="toLogin">去注册页</i-button>
       <i-button type="primary" @click="toPay">去支付页</i-button>

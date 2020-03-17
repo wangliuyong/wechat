@@ -1,6 +1,13 @@
 <template>
   <div class="counter-warp">
+    
     <i-input :value="userInfo.nickName" title="昵称" autofocus placeholder="名字" @inputchange="nameChange"/>
+    
+    <picker @change="bindPickerChange" :value="index" :range="array">
+     <view class="picker">
+        当前选择：{{select}}
+      </view>
+    </picker>
     <i-button @click="register" type="primary" size="small">注册</i-button>
   </div>
 </template>
@@ -17,7 +24,10 @@ export default {
      userInfo:{
        nickName:'',
        roleId:0
-     }
+     },
+     index:0,
+     array: ['美国', '中国', '巴西', '日本'],
+     select:'美国'
     }
   },
   components: {
@@ -31,7 +41,10 @@ export default {
     },
     nameChange(value){
       this.userInfo.nickName = value;
-    }
+    },
+    bindPickerChange: function(e) {
+      this.select= this.array[e.target.value];
+  },
   },
   created() {}
 };

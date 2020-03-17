@@ -1,4 +1,4 @@
-const baseUrl = 'http://localhost:3000'
+const baseUrl = 'http://192.168.0.136:8089'
  
 function request (url, method = 'get' , data = {}) {
   // wx.showLoading({
