@@ -29,5 +29,7 @@ export default {
 };
 </script>
 
-<style>
+<style lang="less">
+  //  引入iview 全局样式 
+  @import './iview/style.less';
 </style>

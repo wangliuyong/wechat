@@ -4,6 +4,7 @@ import Vuex from 'vuex'
 import store from './store/store'
 
 import WXrequest from './utils/wx-request'
+import './iview/'
 
 
 Vue.prototype.$httpWX = WXrequest
