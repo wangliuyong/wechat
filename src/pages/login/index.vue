@@ -43,7 +43,8 @@ export default {
       this.userInfo.nickName = value;
     },
     bindPickerChange: function(e) {
-      this.select= this.array[e.target.value];
+      this.userInfo.roleId = e.target.value
+      this.select= this.array[e.target.value]
   },
   },
   created() {}
