@@ -23,16 +23,20 @@ var server = http.createServer(function(request, response){
     response.statusCode = 200;
     response.setHeader('Content-Type', 'application/json;charset=utf-8');
     response.write(`{
-      "code":1,
-      "user": {
-        "login": true
+      "code":0,
+      "message": "成功",
+      "data": {
+        "login": true,
+        "organization":1,
+        "nickName":"王刘永",
+        "avatar":"http://baidu.com"
       }
     }`);
     response.end();
   } else {
     response.statusCode = 404
     response.setHeader('Content-Type', 'text/html;charset=utf-8')
-    response.write('呜呜呜')
+    response.write('请检查访问路径')
     response.end()
   }
 
